@@ -9,7 +9,6 @@ public class PersonajeController : MonoBehaviour
     public float velocidadCorrer = 10f;
     public float fuerzaSalto = 5f;
     public Transform camaraPrimeraPersona;
-
     private Vector3 movimiento;
     private Animator animator;
     private Rigidbody rb;
@@ -20,7 +19,6 @@ public class PersonajeController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-
         if (camaraPrimeraPersona == null)
         {
             camaraPrimeraPersona = Camera.main.transform;
