@@ -6,14 +6,15 @@ TagManager:
   tags:
   - Suelo
   - PlayerInteractionZone
+  - Zone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - WordCellLayer
   - Water
   - UI
-  - 
+  - PlayerLayer
   - 
   - 
   - 
