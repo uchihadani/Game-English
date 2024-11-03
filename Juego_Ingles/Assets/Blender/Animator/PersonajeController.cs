@@ -14,6 +14,10 @@ public class PersonajeController : MonoBehaviour
     private Rigidbody rb;
     private bool enSuelo = true;
 
+    // Apartado para la música de fondo
+    public AudioClip musicaFondo; // Clip de audio para la música de fondo
+    private AudioSource audioSource; // Componente AudioSource para reproducir la música
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,6 +27,14 @@ public class PersonajeController : MonoBehaviour
         {
             camaraPrimeraPersona = Camera.main.transform;
         }
+
+        // Configuración del AudioSource para la música de fondo
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = musicaFondo;
+        audioSource.loop = true; // Hacer que la música se reproduzca en bucle
+        audioSource.playOnAwake = true; // Reproducir automáticamente al iniciar
+        audioSource.volume = 0.5f; // Ajustar el volumen (puedes cambiarlo si es necesario)
+        audioSource.Play(); // Reproducir la música de fondo
     }
 
     void Update()
